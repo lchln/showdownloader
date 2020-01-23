@@ -19,6 +19,8 @@ class Downloader:
         for i in range(len(ep_l)):
             key_l.append('S' + sea + 'E' + ep_l[i])
 
+        print(key_l)
+
         for k in key_l:
             link_l.append(d.get(k)['Link'])
         print('Downloading ' + str(len(link_l)) + ' files...')
@@ -30,7 +32,7 @@ class Downloader:
 
     def download_links(self, file_path, link_l):
         for l in link_l:
-            print(' - Downloading into')
+            print(' - Downloading into',file_pathh)
             os.system('megadl --path=' + file_path.replace(' ', '\ ') +
                       '/Downloads' + '/ ' + l)
 

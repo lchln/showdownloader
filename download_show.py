@@ -48,13 +48,22 @@ if __name__ == '__main__':
     except:
         ep = input('Episode(s): ')
 
+    if int(sea) < 10: sea = '0' + sea
+
     ep_l = ep.split('-')
 
-    try:
-        if int(sea) < 10: sea = '0' + sea
-        if int(ep_l[0]) < 10: ep_l[0] = '0' + ep_l[0]
-        if int(ep_l[1]) < 10: ep_l[0] = '0' + ep_l[1]
-    except:
-        print()
+    if len(ep_l) == 1:
+        epi_num = 1
+    else:
+        epi_num = int(ep_l[1]) - int(ep_l[0]) + 1
+
+    ep_l_t = []
+    for i in range(int(ep_l[0]), int(ep_l[0]) + epi_num):
+        print(i)
+        i_str = str(i)
+        if i < 10:
+            i_str = '0' + i_str
+        ep_l_t.append(i_str)
+    ep_l = ep_l_t
 
     main()
