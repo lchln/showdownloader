@@ -16,12 +16,9 @@ class Rename:
 
                 e_loc_start = input_name.upper().find('S')
                 while input_name[e_loc_start + 3].upper() != 'E':
-                    print('Almost got me!')
-                    e_loc_start = input_name.upper().find('S', e_loc_start)
-                    print(e_loc_start)
+                    e_loc_start = input_name.upper().find('S', e_loc_start + 1)
 
                 episode_id = input_name[e_loc_start:e_loc_start + 6].upper()
-                print(episode_id)
 
                 title = tit
                 title += ' - ' + episode_id + ' - '

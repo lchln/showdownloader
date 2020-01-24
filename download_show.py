@@ -59,7 +59,6 @@ if __name__ == '__main__':
 
     ep_l_t = []
     for i in range(int(ep_l[0]), int(ep_l[0]) + epi_num):
-        print(i)
         i_str = str(i)
         if i < 10:
             i_str = '0' + i_str
